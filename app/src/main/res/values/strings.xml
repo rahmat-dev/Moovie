@@ -5,4 +5,26 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_movie_fragment">Hello movie fragment</string>
     <string name="hello_tvshow_fragment">Hello tvshow fragment</string>
+    <string name="example_release_at">2018-12-07</string>
+    <string name="example_movie_title">Aquaman</string>
+    <string name="example_movie_genres">Action, Adventure and Drama</string>
+    <string name="example_movie_rating">7.0</string>
+    <string name="title_activity_detail">DetailActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="durations">Durations</string>
+    <string name="total_episodes">Total Episodes</string>
+    <string name="overviews">Overviews:</string>
+    <string name="example_release_year">(2018)</string>
+    <string name="example_rating_average">(7.0/10)</string>
+    <string name="example_movie_durations">2h 29m</string>
+    <string name="example_total_episodes">32 Episodes</string>
+    <string name="example_overviews">As the Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos.</string>
+    <string name="genres">Genres:</string>
 </resources>

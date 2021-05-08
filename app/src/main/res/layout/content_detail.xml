@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkblue_500"
+    android:padding="16dp"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/image_poster"
+            android:layout_width="120dp"
+            android:layout_height="180dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:background="@color/darkblue_200" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/lightgray"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            app:layout_constraintStart_toEndOf="@+id/image_poster"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/example_movie_title" />
+
+        <TextView
+            android:id="@+id/tv_release_at"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/lightgray_50"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"
+            tools:text="@string/example_release_year" />
+
+        <LinearLayout
+            android:id="@+id/rating_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical"
+            app:layout_constraintStart_toStartOf="@id/tv_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_release_at">
+
+            <androidx.appcompat.widget.AppCompatRatingBar
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:id="@+id/rating_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:stepSize="0.1"
+                android:progressTint="@color/gold"
+                android:progressBackgroundTint="@color/lightgray_50"
+                tools:rating="3.5" />
+
+            <TextView
+                android:id="@+id/rating_average"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:textColor="@color/lightgray_50"
+                android:textSize="12sp"
+                android:fontFamily="sans-serif-light"
+                tools:text="@string/example_rating_average" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_label_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:visibility="gone"
+            android:text="@string/durations"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:textColor="@color/lightgray_50"
+            app:layout_constraintStart_toStartOf="@id/tv_title"
+            app:layout_constraintTop_toBottomOf="@+id/rating_container"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tv_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:textSize="14sp"
+            android:textColor="@color/lightgray"
+            app:layout_constraintStart_toStartOf="@id/tv_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_label_duration"
+            tools:text="@string/example_movie_durations"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tv_label_total_episodes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:visibility="gone"
+            android:text="@string/total_episodes"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:textColor="@color/lightgray_50"
+            app:layout_constraintStart_toStartOf="@id/tv_title"
+            app:layout_constraintTop_toBottomOf="@+id/rating_container" />
+
+        <TextView
+            android:id="@+id/tv_total_episodes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:textSize="14sp"
+            android:textColor="@color/lightgray"
+            app:layout_constraintStart_toStartOf="@id/tv_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_label_total_episodes"
+            tools:text="@string/example_total_episodes" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cardBackgroundColor="@color/darkblue_200"
+        app:cardCornerRadius="8dp"
+        app:contentPadding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_label_overviews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/overviews"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:textColor="@color/lightgray_50" />
+
+            <TextView
+                android:id="@+id/tv_overviews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textSize="14sp"
+                android:textColor="@color/lightgray"
+                tools:text="@string/example_overviews" />
+
+            <TextView
+                android:id="@+id/tv_label_genres"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/genres"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:textColor="@color/lightgray_50" />
+
+            <TextView
+                android:id="@+id/tv_genres"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textSize="14sp"
+                android:textColor="@color/lightgray"
+                tools:text="@string/example_movie_genres" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

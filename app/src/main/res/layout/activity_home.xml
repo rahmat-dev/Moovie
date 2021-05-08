@@ -11,8 +11,7 @@
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/darkblue_200"
-        android:padding="16dp">
+        android:background="@color/darkblue_200">
 
         <ImageView
             android:layout_width="120dp"
