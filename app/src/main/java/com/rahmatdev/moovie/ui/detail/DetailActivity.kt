@@ -14,7 +14,6 @@ import com.rahmatdev.moovie.R
 import com.rahmatdev.moovie.data.MovieEntity
 import com.rahmatdev.moovie.data.TvShowEntity
 import com.rahmatdev.moovie.databinding.ActivityDetailBinding
-import java.text.DecimalFormat
 
 class DetailActivity : AppCompatActivity() {
 
