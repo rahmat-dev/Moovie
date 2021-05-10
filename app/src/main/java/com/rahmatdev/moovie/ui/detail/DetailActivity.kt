@@ -72,8 +72,6 @@ class DetailActivity : AppCompatActivity() {
             tvGenres.text = movie.genres
             tvLabelDuration.visibility = View.VISIBLE
             tvDuration.visibility = View.VISIBLE
-            tvLabelTotalEpisodes.visibility = View.GONE
-            tvTotalEpisodes.visibility = View.GONE
 
             ratingBar.rating = (movie.vote_average / 2).toFloat()
             ratingAverage.text = "(${movie.vote_average}/10)"
@@ -109,8 +107,6 @@ class DetailActivity : AppCompatActivity() {
             tvGenres.text = tvShow.genres
             tvLabelTotalEpisodes.visibility = View.VISIBLE
             tvTotalEpisodes.visibility = View.VISIBLE
-            tvLabelDuration.visibility = View.GONE
-            tvDuration.visibility = View.GONE
 
             ratingBar.rating = (tvShow.vote_average / 2).toFloat()
             ratingAverage.text = "(${tvShow.vote_average}/10)"
