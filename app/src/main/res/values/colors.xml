@@ -13,4 +13,5 @@
     <color name="darkblue_500">#FF374151</color>
     <color name="darkblue_700">#FF1B2331</color>
     <color name="gold">#FFFAA51E</color>
+    <color name="transparent">#00000000</color>
 </resources>

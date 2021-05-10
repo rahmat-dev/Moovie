@@ -1,5 +1,6 @@
 package com.rahmatdev.moovie.ui.tvshow
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -9,6 +10,7 @@ import com.bumptech.glide.request.RequestOptions
 import com.rahmatdev.moovie.R
 import com.rahmatdev.moovie.data.TvShowEntity
 import com.rahmatdev.moovie.databinding.ItemsTvShowBinding
+import com.rahmatdev.moovie.ui.detail.DetailActivity
 
 class TvShowAdapter : RecyclerView.Adapter<TvShowAdapter.TvShowViewHolder>() {
     private val listTvShows = ArrayList<TvShowEntity>()
@@ -51,6 +53,13 @@ class TvShowAdapter : RecyclerView.Adapter<TvShowAdapter.TvShowViewHolder>() {
                     .load(tvShow.poster_path)
                     .apply(requestOptions)
                     .into(moviePoster)
+
+                itemView.setOnClickListener {
+                    val intent = Intent(itemView.context, DetailActivity::class.java)
+                    intent.putExtra(DetailActivity.TYPE, "tv_show")
+                    intent.putExtra(DetailActivity.TV_SHOW_ID, tvShow.tvShowId)
+                    itemView.context.startActivity(intent)
+                }
             }
         }
     }

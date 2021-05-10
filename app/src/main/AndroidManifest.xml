@@ -14,7 +14,12 @@
         <activity
             android:name=".ui.detail.DetailActivity"
             android:label="@string/title_activity_detail"
-            android:theme="@style/Theme.Moovie.NoActionBar" />
+            android:parentActivityName=".ui.home.HomeActivity"
+            android:theme="@style/Theme.Moovie.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.home.HomeActivity" />
+        </activity>
         <activity android:name=".ui.home.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

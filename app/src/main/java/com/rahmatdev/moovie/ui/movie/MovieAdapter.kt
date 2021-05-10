@@ -1,5 +1,6 @@
 package com.rahmatdev.moovie.ui.movie
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -9,6 +10,7 @@ import com.bumptech.glide.request.RequestOptions
 import com.rahmatdev.moovie.R
 import com.rahmatdev.moovie.data.MovieEntity
 import com.rahmatdev.moovie.databinding.ItemsMovieBinding
+import com.rahmatdev.moovie.ui.detail.DetailActivity
 
 class MovieAdapter : RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
     private val listMovies = ArrayList<MovieEntity>()
@@ -51,6 +53,13 @@ class MovieAdapter : RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
                     .load(movie.poster_path)
                     .apply(requestOptions)
                     .into(moviePoster)
+
+                itemView.setOnClickListener {
+                    val intent = Intent(itemView.context, DetailActivity::class.java)
+                    intent.putExtra(DetailActivity.TYPE, "movie")
+                    intent.putExtra(DetailActivity.MOVIE_ID, movie.movieId)
+                    itemView.context.startActivity(intent)
+                }
             }
         }
     }
